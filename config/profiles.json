@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "192.168.0.34",
+    "port": 22,
+    "username": "fedora",
+    "password": "fedora"
+  },
+  {
+    "ip": "192.168.0.93",
+    "port": 22,
+    "username": "archlinux",
+    "password": "archlinux"
+  }
+]

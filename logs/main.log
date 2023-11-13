@@ -1,0 +1,16 @@
+2023-11-13 13:46:09,086 - [INFO] - __main__ - config successfully parsed and logger configured
+2023-11-13 13:46:09,086 - [INFO] - __main__ - profiles successfully read
+2023-11-13 13:46:09,336 - [INFO] - __main__ - successfully connected to database
+2023-11-13 13:46:09,336 - [INFO] - __main__ - starting to process profile {'ip': '192.168.0.34', 'port': 22, 'username': 'fedora', 'password': 'fedora'}
+2023-11-13 13:46:09,336 - [INFO] - __main__ - host profile successfully parsed
+2023-11-13 13:46:09,352 - [INFO] - paramiko.transport - Connected (version 2.0, client OpenSSH_8.8)
+2023-11-13 13:46:09,561 - [INFO] - paramiko.transport - Authentication (password) successful!
+2023-11-13 13:46:09,853 - [INFO] - __main__ - successfully got host params
+2023-11-13 13:46:09,857 - [INFO] - __main__ - host profile successfully saved to database
+2023-11-13 13:46:09,858 - [INFO] - __main__ - starting to process profile {'ip': '192.168.0.93', 'port': 22, 'username': 'archlinux', 'password': 'archlinux'}
+2023-11-13 13:46:09,858 - [INFO] - __main__ - host profile successfully parsed
+2023-11-13 13:46:09,867 - [INFO] - paramiko.transport - Connected (version 2.0, client OpenSSH_8.8)
+2023-11-13 13:46:09,937 - [INFO] - paramiko.transport - Auth banner: b'+-+-+-+-+-+-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+-+-+\n                        LINUXVMIMAGES.COM\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n                    User Name: archlinux\n                    Password:  archlinux (sudo su -)\n'
+2023-11-13 13:46:09,937 - [INFO] - paramiko.transport - Authentication (password) successful!
+2023-11-13 13:46:10,017 - [INFO] - __main__ - successfully got host params
+2023-11-13 13:46:10,018 - [INFO] - __main__ - host profile successfully saved to database

@@ -1,0 +1,55 @@
+profiles:
+  # path to the file of scanned profiles
+  path: "config/profiles.json"
+
+ssh:
+  # commands to execute on each machine connected via ssh
+  # format - attr_name: command
+  # attr_name must be exactly the same as attribute name of class Host in file src/host.py
+  commands:
+    os_name: uname -o
+    os_ver: cat /etc/*-release | grep -oP '(?<=^PRETTY_NAME=").*(?="$)' -m 1
+    os_arch: uname -m
+
+logger:
+  # logger settings for logging.config.dictConfig() function of package logging
+  # docs for dictionary config available here:
+  # https://docs.python.org/3/library/logging.config.html#logging-config-dictschema
+  version: 1
+  disable_existing_loggers: no
+  formatters:
+    simple:
+      format: "%(asctime)s - [%(levelname)s] - %(name)s - %(message)s"
+  handlers:
+    file:
+      class: logging.FileHandler
+      level: INFO
+      formatter: simple
+      filename: ./logs/main.log
+      mode: w
+  loggers:
+    '':
+      level: INFO
+      handlers: [file]
+      propagate: yes
+    sqlalchemy.engine:
+      level: ERROR
+      handlers: [file]
+      propagate: yes
+
+db:
+  # database connection url
+  url: "postgresql://postgres:1@localhost:5432/maxpatrol_vms"
+
+  # table name where machine profiles are saved
+  table: profiles
+
+  # table columns associated with host profile attribute names
+  # format - column_name: attr_name
+  # column_name is the name of a column in the table
+  # attr_name is must be exactly the same as attribute name of class Host in file src/host.py
+  columns:
+    ip: ip
+    os_name: os_name
+    os_ver: os_ver
+    os_arch: os_arch
